@@ -9,5 +9,5 @@ import com.afalenkin.ytdlpbridge.commandline.model.LineCommand
  */
 interface CommandLineExecutor {
 
-    suspend fun execute(executable: ExecutablePath, command: LineCommand): CommandResult
+    suspend fun execute(executable: ExecutablePathProvider, command: LineCommand): CommandResult
 }

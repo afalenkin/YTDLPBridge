@@ -1,7 +1,7 @@
 package com.afalenkin.ytdlpbridge.commandline.impl
 
 import com.afalenkin.ytdlpbridge.commandline.CommandLineExecutor
-import com.afalenkin.ytdlpbridge.commandline.ExecutablePath
+import com.afalenkin.ytdlpbridge.commandline.ExecutablePathProvider
 import com.afalenkin.ytdlpbridge.commandline.model.CommandResult
 import com.afalenkin.ytdlpbridge.commandline.model.LineCommand
 import kotlinx.coroutines.Dispatchers
@@ -18,8 +18,8 @@ import java.nio.file.Path
  */
 @Service
 class CommandLineExecutorImpl : CommandLineExecutor {
-    override suspend fun execute(executable: ExecutablePath, command: LineCommand): CommandResult =
-        executeCommand(executable.getPath(), command.getCommand())
+    override suspend fun execute(executable: ExecutablePathProvider, command: LineCommand): CommandResult =
+        executeCommand(executable.path, command.getCommand())
 
     private suspend fun executeCommand(path: Path, command: List<String>): CommandResult =
         withContext(Dispatchers.IO) {
