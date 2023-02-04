@@ -18,7 +18,7 @@ class ApplicationConfig {
 
     @Bean
 //    environment.YT_DLP_PATH
-    fun ytDlpPath(@Value("\${yt.dlp.path}") @NotBlank ytDlpPath: String) =
+    fun ytDlpPath(@Value("\${yt.dlp.dlpPath}") @NotBlank ytDlpPath: String) =
         object : ExecutablePathProvider {
             override val path: Path
                 get() = Path.of(ytDlpPath)
