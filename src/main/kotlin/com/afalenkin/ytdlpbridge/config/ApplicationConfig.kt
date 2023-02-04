@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.context.annotation.PropertySource
 import java.nio.file.Path
 
 /**
@@ -12,10 +13,12 @@ import java.nio.file.Path
  *oxqq@ya.ru
  */
 @Configuration
+@PropertySource(value = ["classpath:application.yml"])
 class ApplicationConfig {
 
     @Bean
-    fun ytDlpPath(@Value("#{environment.YT_DLP_PATH}") @NotBlank ytDlpPath: String) =
+//    environment.YT_DLP_PATH
+    fun ytDlpPath(@Value("\${yt.dlp.path}") @NotBlank ytDlpPath: String) =
         object : ExecutablePathProvider {
             override val path: Path
                 get() = Path.of(ytDlpPath)
