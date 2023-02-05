@@ -2,6 +2,8 @@ package com.afalenkin.ytdlpbridge.service.download.impl
 
 import com.afalenkin.ytdlpbridge.duplicatedTestResult
 import com.afalenkin.ytdlpbridge.service.cmd.impl.CommandLineExecutorImpl
+import com.afalenkin.ytdlpbridge.service.cmdbuilder.CommandBuilder
+import com.afalenkin.ytdlpbridge.service.cmdbuilder.YtDlpCommandBuilder
 import com.afalenkin.ytdlpbridge.successTestResult
 import com.afalenkin.ytdlpbridge.testCommand
 import com.afalenkin.ytdlpbridge.testPathVal

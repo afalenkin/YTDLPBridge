@@ -5,6 +5,7 @@ import com.afalenkin.ytdlpbridge.service.cmd.ExecutablePathProvider
 import com.afalenkin.ytdlpbridge.service.cmd.model.LineCommand
 import com.afalenkin.ytdlpbridge.model.DownloadFormat
 import com.afalenkin.ytdlpbridge.model.command.YtDlpCommand
+import com.afalenkin.ytdlpbridge.service.cmdbuilder.YtDlpCommandBuilder
 import com.afalenkin.ytdlpbridge.testCommand
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.*
@@ -29,6 +30,9 @@ internal class CommandLineExecutorImplTest {
     @Autowired
     private lateinit var ytDlpPath: ExecutablePathProvider
 
+    @Autowired
+    private lateinit var ytDlpCommandBuilder: YtDlpCommandBuilder
+
     val command = object : LineCommand() {
         override fun getCommand() = listOf("--help")
     }
@@ -50,7 +54,7 @@ internal class CommandLineExecutorImplTest {
     fun `only for dev!`() {
 
         val result = runBlocking {
-            cmdExecutor.execute(ytDlpPath, testCommand)
+            cmdExecutor.execute(ytDlpPath, ytDlpCommandBuilder.build(DownloadFormat.MP3.formatCode, "kXYiU_JCYtU"))
         }
         print(result)
         assertEquals(0, result.exitCode)
