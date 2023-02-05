@@ -1,5 +1,6 @@
 package com.afalenkin.ytdlpbridge.service.cmdbuilder
 
+import com.afalenkin.ytdlpbridge.model.DownloadFormat
 import com.afalenkin.ytdlpbridge.service.cmd.model.LineCommand
 
 /**
@@ -7,5 +8,5 @@ import com.afalenkin.ytdlpbridge.service.cmd.model.LineCommand
  *oxqq@ya.ru
  */
 interface CommandBuilder {
-    fun build(formatCode: String, contentId: String): LineCommand
+    fun build(formatCode: String = DownloadFormat.MP3.formatCode, contentId: String): LineCommand
 }
