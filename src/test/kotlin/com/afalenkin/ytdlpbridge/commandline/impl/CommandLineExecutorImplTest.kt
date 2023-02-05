@@ -1,12 +1,14 @@
 package com.afalenkin.ytdlpbridge.commandline.impl
 
-import com.afalenkin.ytdlpbridge.commandline.CommandLineExecutor
-import com.afalenkin.ytdlpbridge.commandline.ExecutablePathProvider
-import com.afalenkin.ytdlpbridge.commandline.model.LineCommand
+import com.afalenkin.ytdlpbridge.service.cmd.CommandLineExecutor
+import com.afalenkin.ytdlpbridge.service.cmd.ExecutablePathProvider
+import com.afalenkin.ytdlpbridge.service.cmd.model.LineCommand
 import com.afalenkin.ytdlpbridge.model.DownloadFormat
 import com.afalenkin.ytdlpbridge.model.command.YtDlpCommand
+import com.afalenkin.ytdlpbridge.testCommand
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -44,21 +46,11 @@ internal class CommandLineExecutorImplTest {
 
     //    D:\dlp\yt-dlp --ffmpeg-location D:\dlp\ffmpeg\bin\ffmpeg.exe kXYiU_JCYtU -x --audio-format mp3
     @Test
-    @DisplayName("Execute simple cd command on windows")
+    @Disabled
     fun `only for dev!`() {
-        val dlpCommandDev = YtDlpCommand(
-            locationFlag = "-P",
-            location = "downloads",
-            converterFlag = "--ffmpeg-location",
-            converterLocation = "D:\\dlp\\ffmpeg\\bin\\ffmpeg.exe",
-            extractFlag = "-x",
-            formatFlag = "--audio-format",
-            format = DownloadFormat.MP3.formatCode,
-            contentId = "kXYiU_JCYtU",
-        )
 
         val result = runBlocking {
-            cmdExecutor.execute(ytDlpPath, dlpCommandDev)
+            cmdExecutor.execute(ytDlpPath, testCommand)
         }
         print(result)
         assertEquals(0, result.exitCode)

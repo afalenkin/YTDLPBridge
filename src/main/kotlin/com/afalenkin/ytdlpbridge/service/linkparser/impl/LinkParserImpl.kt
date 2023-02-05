@@ -1,7 +1,7 @@
-package com.afalenkin.ytdlpbridge.linkparser.impl
+package com.afalenkin.ytdlpbridge.service.linkparser.impl
 
 import com.afalenkin.ytdlpbridge.exceptions.UrlParseException
-import com.afalenkin.ytdlpbridge.linkparser.LinkParser
+import com.afalenkin.ytdlpbridge.service.linkparser.LinkParser
 import org.springframework.stereotype.Service
 import java.net.URL
 

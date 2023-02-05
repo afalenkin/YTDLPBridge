@@ -1,4 +1,4 @@
-package com.afalenkin.ytdlpbridge.linkparser
+package com.afalenkin.ytdlpbridge.service.linkparser
 
 /**
  *@author Alenkin Andrew

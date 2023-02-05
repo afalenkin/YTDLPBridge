@@ -1,6 +1,6 @@
 package com.afalenkin.ytdlpbridge.config
 
-import com.afalenkin.ytdlpbridge.commandline.ExecutablePathProvider
+import com.afalenkin.ytdlpbridge.service.cmd.ExecutablePathProvider
 import jakarta.validation.constraints.NotBlank
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean

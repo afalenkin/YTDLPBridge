@@ -1,4 +1,4 @@
-package com.afalenkin.ytdlpbridge.commandline
+package com.afalenkin.ytdlpbridge.service.cmd
 
 import java.nio.file.Path
 

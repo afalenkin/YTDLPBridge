@@ -1,9 +1,9 @@
 yt:
   dlp:
-    dlpPath: "D:\dlp\yt-dlp"
-    locationFlag: "-P"
-    location: "downloads"
-    converterFlag: "--ffmpeg-location"
-    converterLocation: "D:\dlp\ffmpeg\bin\ffmpeg.exe"
-    extractFlag: "-x"
-    formatFlag: "--audio-format"
+    dlpPath: 'D:\dlp\yt-dlp'
+    locationFlag: '-P'
+    location: 'downloads'
+    converterFlag: '--ffmpeg-location'
+    converterLocation: 'D:\dlp\ffmpeg\bin\ffmpeg.exe'
+    extractFlag: '-x'
+    formatFlag: '--audio-format'

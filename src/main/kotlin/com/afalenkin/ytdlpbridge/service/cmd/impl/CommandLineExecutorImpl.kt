@@ -1,9 +1,9 @@
-package com.afalenkin.ytdlpbridge.commandline.impl
+package com.afalenkin.ytdlpbridge.service.cmd.impl
 
-import com.afalenkin.ytdlpbridge.commandline.CommandLineExecutor
-import com.afalenkin.ytdlpbridge.commandline.ExecutablePathProvider
-import com.afalenkin.ytdlpbridge.commandline.model.CommandResult
-import com.afalenkin.ytdlpbridge.commandline.model.LineCommand
+import com.afalenkin.ytdlpbridge.service.cmd.CommandLineExecutor
+import com.afalenkin.ytdlpbridge.service.cmd.ExecutablePathProvider
+import com.afalenkin.ytdlpbridge.service.cmd.model.CommandResult
+import com.afalenkin.ytdlpbridge.service.cmd.model.LineCommand
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runInterruptible

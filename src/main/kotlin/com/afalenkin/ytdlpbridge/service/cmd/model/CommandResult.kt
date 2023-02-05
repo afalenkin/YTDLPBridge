@@ -1,4 +1,4 @@
-package com.afalenkin.ytdlpbridge.commandline.model
+package com.afalenkin.ytdlpbridge.service.cmd.model
 
 data class CommandResult(
     val exitCode: Int,

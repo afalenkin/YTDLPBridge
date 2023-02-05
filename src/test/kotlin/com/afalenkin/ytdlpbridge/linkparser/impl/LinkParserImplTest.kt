@@ -1,7 +1,7 @@
 package com.afalenkin.ytdlpbridge.linkparser.impl
 
 import com.afalenkin.ytdlpbridge.exceptions.UrlParseException
-import com.afalenkin.ytdlpbridge.linkparser.LinkParser
+import com.afalenkin.ytdlpbridge.service.linkparser.LinkParser
 import io.kotest.assertions.throwables.shouldThrow
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test

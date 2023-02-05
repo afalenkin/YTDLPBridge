@@ -1,7 +1,7 @@
-package com.afalenkin.ytdlpbridge.commandline
+package com.afalenkin.ytdlpbridge.service.cmd
 
-import com.afalenkin.ytdlpbridge.commandline.model.CommandResult
-import com.afalenkin.ytdlpbridge.commandline.model.LineCommand
+import com.afalenkin.ytdlpbridge.service.cmd.model.CommandResult
+import com.afalenkin.ytdlpbridge.service.cmd.model.LineCommand
 
 /**
  *@author Alenkin Andrew

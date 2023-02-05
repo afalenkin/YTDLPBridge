@@ -1,7 +1,6 @@
 package com.afalenkin.ytdlpbridge.model.command
 
-import com.afalenkin.ytdlpbridge.commandline.model.LineCommand
-import com.afalenkin.ytdlpbridge.model.DownloadFormat
+import com.afalenkin.ytdlpbridge.service.cmd.model.LineCommand
 
 /**
  *@author Alenkin Andrew
